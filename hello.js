@@ -4,7 +4,6 @@ function extend (parent, child){
 }
 
 
-
 function Shape (color){
   this.color = color
 }
@@ -12,7 +11,6 @@ function Shape (color){
 Shape.prototype.common = function(){
   console.log('I am common')
 }
-
 
 
 function Square (width,color){
@@ -34,6 +32,8 @@ function Circle (radius,color){
 }
 
 extend(Shape,Circle)
+
+Circle.prototype.common = function(){}
 
 var sqr1 = new Square(10,'blue')
 console.log(sqr1)
